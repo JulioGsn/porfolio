@@ -1,5 +1,6 @@
 <script lang="ts">
     import Skill from "$lib/components/Skill.svelte";
+	import TimeLine from "$lib/components/TimeLine.svelte";
 </script>
 
 <div class="page">
