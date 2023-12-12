@@ -3,80 +3,49 @@
 	import TimeLine from "$lib/components/TimeLine.svelte";
 </script>
 
-<div class="page">
-    <header class="flex flex-col justify-center items-center gap-2 header text-center w-full py-4 bg-slate-900">
+<div class="desktop h-screen">
+    <div class="top-bar bg-black text-white flex items-center justify-between text-xs py-1 px-4">
         <div>
-            <span class="text-2xl text-yellow-600">Hi 0/</span>
-            <span class="text-lg">
-                Júlio here
-            </span>
-        </div>
-        <div class="h-24 w-24">
-            <img 
-                src="me_linkeding_profile_pic.jpeg"
-                alt="" 
-                class="rounded rounded-full"
-            />
+            Activities
         </div>
         <div>
-            I'm a
-            <span class="text-yellow-600">
-                Software Engineer
-            </span>
-            currently working at 
-            <u class="text-yellow-600">
-                @Superone
-            </u>
+            {new Date()}
         </div>
-    </header>
+        <div>
+            en
+        </div>
+    </div>
+    <main class="main bg-gradient-to-b from-cyan-600 to-blue-600 w-full h-full relative">
+       <div class="flex bg-slate-800 rounded-xl p-4 absolute top-1/4 left-4">
+            <div class="dock w-full flex flex-col items-center justify-evenly gap-2">
+                <div class="w-10 h-10 bg-cyan-800 rounded-lg"></div>
+                <div class="w-10 h-10 bg-cyan-700 rounded-lg"></div>
+                <div class="w-10 h-10 bg-cyan-900 rounded-lg"></div>
+            </div>
+       </div>
 
-    <main class="main">
-        <section class="bg-slate-100 p-4">
-            <div class="text-yellow-900 text-3xl text-center pb-2 mb-4 border-b-2">
-                SKILLS
+       <div class="terminal-container absolute flex items-center w-full h-full justify-center">
+            <div class="terminal bg-gray-900 w-96 h-64 rounded-lg">
+                <div class="flex items-center justify-center bg-gray-700 w-full h-6 rounded-t-lg relative">
+                    <span></span>
+                    <span class="text-gray-400 text-xs">juliogsn@os</span>
+                    <div class="flex gap-2 text-xs text-gray-400 absolute right-2">
+                        <div>
+                            _
+                        </div>
+                        <div>
+                            []
+                        </div>
+                        <div>
+                            x
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="flex gap-4 flex-wrap justify-center">
-                <Skill iconUrl={"icons/NodeJS-Dark.svg"} description="NodeJS" />
-                <Skill iconUrl={"icons/GoLang.svg"} description="Golang" />
-                <Skill iconUrl={"icons/MySQL-Dark.svg"} description="MySQL" />
-                <Skill iconUrl={"icons/AWS-Dark.svg"} description="AWS" />
-                <Skill iconUrl={"icons/Svelte.svg"} description="Svelte" />
-                <Skill iconUrl={"icons/React-Dark.svg"} description="React" />
-                <Skill iconUrl={"icons/TailwindCSS-Dark.svg"} description="TailwindCSS" />
-                <Skill iconUrl={"icons/Linux-Dark.svg"} description="Linux" />
-                <Skill iconUrl={"icons/Git.svg"} description="Git" />
-            </div>           
-        </section>
-        <section class="bg-black p-4">
-            <div class="text-slate-300 text-3xl text-center">
-                EXPERIENCE
-            </div>
-        </section>
-        <section class="bg-yellow-600 p-4">
-            <div class="text-slate-800 text-3xl text-center">
-                PROJECTS
-            </div>
-        </section>
-        <section class="bg-slate-600 p-4">
-            <div class="text-slate-800 text-3xl text-center">
-                EDUCATION
-            </div>
-        </section>
-        <!--
-        <section>
-            Projects
-        </section>
-        <section>
-            Tech stuff
-        </section>
-        -->
+       </div>
     </main>
 </div>
 
 <style>
-    .page {
-        color: white;
-    }
-    .header {
-    }
+
 </style>
